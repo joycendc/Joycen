@@ -29,6 +29,9 @@ const Home = () => {
             src="https://joycendc.github.io/Profile/images/avatar.png"
             alt="joycen"
           />
+          <div className="cta">
+            <button>Download Resume</button>
+          </div>
           <div className="socialIcons">
             <div className="socialLink">
               <Link
