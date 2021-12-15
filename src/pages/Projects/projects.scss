@@ -1,0 +1,39 @@
+.projectWrapper {
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: flex-start;
+  padding: 4rem 4rem 0 4rem;
+
+  .projItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    height: 20rem;
+    background-clip: padding-box;
+    border: 2px solid #dee2e6;
+    border-radius: 0.25rem;
+    z-index: 90;
+
+    div {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1089px) {
+  .projectWrapper {
+  }
+}
+
+@media only screen and (max-width: 549px) {
+  .projectWrapper {
+    padding: 2rem 1rem 0 1rem;
+  }
+}

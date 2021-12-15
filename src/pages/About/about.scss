@@ -1,0 +1,15 @@
+.aboutWrapper {
+  height: calc(100vh - 120px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .aboutDesc {
+    font-size: 1.5em;
+    text-align: center;
+    width: 40rem;
+    letter-spacing: 0.1ch;
+    z-index: 90;
+  }
+}

@@ -1,0 +1,19 @@
+.skillCard {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    height: 6rem;
+    width: 6rem;
+    margin-bottom: 0.8rem;
+    filter: grayscale(100%);
+  }
+
+  span {
+    font-weight: bold;
+    z-index: 90;
+  }
+}

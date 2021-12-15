@@ -1,0 +1,64 @@
+.homeWrapper {
+  min-height: calc(100vh - 120px);
+  width: 100vw;
+
+  .homeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+
+    .name {
+      text-align: center;
+      font-size: clamp(1.5rem, 3.5rem, 4rem);
+      padding: 30px 0;
+      z-index: 90;
+    }
+    .desc {
+      text-align: center;
+      line-height: 30px;
+      font-size: clamp(0.9rem, 1rem, 1.2rem);
+      font-weight: bold;
+      letter-spacing: 0.25em;
+      z-index: 90;
+    }
+    .avatar {
+      margin-top: 50px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      padding: 5px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      z-index: 99;
+      z-index: 90;
+    }
+    .socialIcons {
+      z-index: 99;
+      margin: 40px 0;
+      margin-bottom: 0;
+
+      .icon {
+        color: darkgray;
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        margin-bottom: 0;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .fb:hover {
+        color: #3b5998;
+      }
+      .git:hover {
+        color: white;
+      }
+      .tt:hover {
+        color: #1da1f2;
+      }
+    }
+  }
+}
