@@ -34,6 +34,13 @@
 
 @media only screen and (max-width: 549px) {
   .projectWrapper {
-    padding: 2rem 1rem 0 1rem;
+    gap: 1rem;
+    .projItem {
+      width: 24rem;
+      height: 14rem;
+
+      div {
+      }
+    }
   }
 }

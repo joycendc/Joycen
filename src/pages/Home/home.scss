@@ -11,14 +11,14 @@
 
     .name {
       text-align: center;
-      font-size: clamp(1.5rem, 3.5rem, 4rem);
+      font-size: 3rem;
       padding: 30px 0;
       z-index: 90;
     }
     .desc {
       text-align: center;
       line-height: 30px;
-      font-size: clamp(0.9rem, 1rem, 1.2rem);
+      font-size: 0.8rem;
       font-weight: bold;
       letter-spacing: 0.25em;
       z-index: 90;
@@ -34,9 +34,54 @@
       z-index: 99;
       z-index: 90;
     }
+
+    .cta {
+      display: flex;
+      gap: 0.9rem;
+      margin-top: 2rem;
+      z-index: 99;
+      font-size: 0.95rem;
+
+      .email {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8em 1.1em;
+
+        font-weight: bolder;
+        color: #303657;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 2px solid #dee2e6;
+        appearance: none;
+        border-radius: 0.25rem;
+        margin: 10px 0;
+        cursor: pointer;
+        gap: 0.7em;
+      }
+      .resume {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8em 1.1em;
+
+        font-weight: bolder;
+        color: #fff;
+        background-color: #303657;
+        background-clip: padding-box;
+        border: 2px solid #dee2e6;
+        appearance: none;
+        border-radius: 0.25rem;
+        margin: 10px 0;
+        cursor: pointer;
+        gap: 0.7em;
+      }
+    }
     .socialIcons {
       z-index: 99;
-      margin: 40px 0;
+      margin: 2rem 0;
       margin-bottom: 0;
 
       .icon {

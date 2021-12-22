@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./home.scss";
 import { seo } from "../../helpers";
-import { FaFacebook, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaGithub, FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
 
 const Home = () => {
   useEffect(() => {
@@ -30,7 +31,17 @@ const Home = () => {
             alt="joycen"
           />
           <div className="cta">
-            <button>Download Resume</button>
+            <Link to="/contact" className="email">
+              {<MdEmail />} Email
+            </Link>
+            <Link
+              className="resume"
+              to="/files/JoycenCapili-Resume.pdf"
+              target="_blank"
+              download
+            >
+              {<FaDownload />} Resume
+            </Link>
           </div>
           <div className="socialIcons">
             <div className="socialLink">

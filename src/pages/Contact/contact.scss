@@ -3,12 +3,13 @@
   width: 100vw;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-left: 20px;
 
   .title {
-    margin: 35px;
-    font-size: clamp(2rem, 4rem, 6rem);
+    margin-bottom: 35px;
+    font-size: 4rem;
     width: 90%;
     z-index: 90;
   }
@@ -109,13 +110,11 @@
 
 @media only screen and (min-width: 550px) and (max-width: 1089px) {
   .contactWrapper {
-    .title {
-      width: 60%;
-    }
     .inner {
       width: 70%;
       flex-direction: column-reverse;
       margin: 0;
+      margin-top: 4rem;
 
       .inputs {
         width: 100%;
@@ -131,13 +130,11 @@
 
 @media only screen and (max-width: 549px) {
   .contactWrapper {
-    .title {
-      width: 80%;
-    }
     .inner {
       width: 80%;
       flex-direction: column-reverse;
       margin: 0;
+      margin-top: 4rem;
 
       .inputs {
         width: 95%;

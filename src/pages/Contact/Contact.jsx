@@ -19,7 +19,6 @@ const Contact = () => {
       transition={{ duration: 0.2 }}
     >
       <div className="contactWrapper">
-        <h1 className="title">Contact Info</h1>
         <div class="inner">
           <div class="inputs">
             <form>
@@ -31,6 +30,7 @@ const Contact = () => {
           </div>
           <div class="contact-info">
             <div class="top-detail">
+              <h1 className="title">Contact Info</h1>
               <h1>Let’s talk how i can help you!</h1>
               <p>
                 If you like to work with me then drop a message using the
