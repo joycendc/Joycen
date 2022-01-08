@@ -47,8 +47,7 @@
           font-weight: 400;
           line-height: 1.5;
           color: #fff;
-
-          background-color: #303657;
+          background-color: #222733;
           background-clip: padding-box;
           border: 2px solid #dee2e6;
           appearance: none;
@@ -62,12 +61,14 @@
         }
 
         .btn {
-          color: #fff;
+          margin-top: 10px;
+          color: var(--background-color);
           border: none;
           padding: 1rem 1.5rem;
-          background-color: #4a89dc;
-          border-color: #4a89dc;
+          background-color: var(--text-color);
           border-radius: 10px;
+          font-weight: 700;
+          font-size: 0.8rem;
           cursor: pointer;
           width: 90%;
         }

@@ -76,3 +76,33 @@ export const skills = [
     src: "https://img.icons8.com/color/48/000000/material-ui.png",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    name: "Project",
+    img: "https://joycendc.github.io/Profile/images//thumb.PNG",
+    desc: "This app let you post your rants about your life.",
+    tags: ["HTML", "CSS", "JS"],
+    link: "",
+    src: "",
+  },
+  {
+    id: 2,
+    name: "Project",
+    img: "https://joycendc.github.io/Profile/images//thumb.PNG",
+    desc: "This app let you post your rants about your life.",
+    tags: ["HTML", "CSS", "JS"],
+    link: "",
+    src: "",
+  },
+  {
+    id: 3,
+    name: "Project",
+    img: "https://joycendc.github.io/Profile/images//thumb.PNG",
+    desc: "This app let you post your rants about your life.",
+    tags: ["HTML", "CSS", "JS"],
+    link: "",
+    src: "",
+  },
+];

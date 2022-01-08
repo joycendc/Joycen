@@ -11,14 +11,14 @@
   .logo {
     .headLink {
       text-decoration: none;
-      color: #fff;
+      color: var(--text-color);
       font-size: 2rem;
       font-weight: 100;
     }
   }
 }
 .scrolled {
-  background-color: #232741;
+  background-color: var(--background-color);
   transition: background-color 0.3s ease;
   border-bottom: 5px solid #0000;
 }

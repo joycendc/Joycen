@@ -1,8 +1,13 @@
+:root {
+  --background-color: #222733;
+  --text-color: #dbe8d4;
+}
+
 .mainWrapper {
   min-height: 100vh;
-  background-color: #232741;
+  background-color: var(--background-color);
   width: 100vw;
-  color: #fff;
+  color: var(--text-color);
 
   .mainContainer {
     width: 100%;

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./project.scss";
 import { motion } from "framer-motion";
 
-const Project = ({ title }) => {
+const Project = ({ data }) => {
   const variants = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
@@ -29,18 +30,29 @@ const Project = ({ title }) => {
           onMouseLeave={(e) => hideInfo(e)}
         >
           <div className={display}>
-            <h1> Project 1{title}</h1>
-            <span className="projDesc">
-              This app let you post your rants about your life.
-            </span>
+            <h1>
+              {data.name} {data.id}
+            </h1>
+            <span className="projDesc">{data.desc}</span>
+            <div className="tags">
+              {data.tags.map((tag) => {
+                return <p className="tag">{tag}</p>;
+              })}
+            </div>
             <div className="cta">
-              <button className="goto">View</button>
+              {data.link && (
+                <Link className="link">
+                  <button className="goto">View</button>
+                </Link>
+              )}
+              {data.src && (
+                <Link className="link">
+                  <button className="goto src">Source</button>
+                </Link>
+              )}
             </div>
           </div>
-          <img
-            alt=""
-            src="https://joycendc.github.io/Profile/images//thumb.PNG"
-          />
+          <img alt="" src={data.img} />
         </div>
       </div>
     </motion.div>

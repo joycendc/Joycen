@@ -3,6 +3,7 @@ import "./projects.scss";
 import { seo } from "../../helpers";
 import { motion } from "framer-motion";
 import Project from "./Project/Project";
+import { projects } from "../../data";
 
 const Projects = () => {
   useEffect(() => {
@@ -36,14 +37,14 @@ const Projects = () => {
   return (
     <motion.ul initial="hidden" animate="visible" variants={list}>
       <div className="projectWrapper">
-        {Array.from(Array(10)).map((_, i) => (
+        {projects.map((proj) => (
           <motion.li
             className="projItem"
             style={{ listStyle: "none" }}
-            key={i}
+            key={proj.id}
             variants={item}
           >
-            <Project title={i + 1} />
+            <Project data={proj} />
           </motion.li>
         ))}
       </div>

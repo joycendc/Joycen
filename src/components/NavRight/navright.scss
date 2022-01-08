@@ -13,15 +13,15 @@
   .link {
     transform: rotate(270deg);
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: 20px;
 
     &:hover {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid var(--text-color);
     }
   }
 
   .active {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--text-color);
   }
 }
