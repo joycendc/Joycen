@@ -30,9 +30,7 @@ const Project = ({ data }) => {
           onMouseLeave={(e) => hideInfo(e)}
         >
           <div className={display}>
-            <h1>
-              {data.name} {data.id}
-            </h1>
+            <h1>{data.name}</h1>
             <span className="projDesc">{data.desc}</span>
             <div className="tags">
               {data.tags.map((tag) => {
@@ -41,12 +39,24 @@ const Project = ({ data }) => {
             </div>
             <div className="cta">
               {data.link && (
-                <Link className="link">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: data.link,
+                  }}
+                  target="_blank"
+                >
                   <button className="goto">View</button>
                 </Link>
               )}
               {data.src && (
-                <Link className="link">
+                <Link
+                  className="link"
+                  to={{
+                    pathname: data.src,
+                  }}
+                  target="_blank"
+                >
                   <button className="goto src">Source</button>
                 </Link>
               )}
