@@ -17,21 +17,31 @@
       object-fit: cover;
     }
 
+    .hoverDiv {
+      position: absolute;
+      right: 0;
+      width: 40%;
+      z-index: 0;
+    }
+
     .projInfoHidden {
       position: absolute;
       left: -30rem;
+      transition: all 0.5s ease;
+      z-index: 2;
     }
 
     .projInfo {
       position: absolute;
       left: 0;
       background-color: var(--background-color);
-      width: 60%;
+      width: 65%;
       display: grid;
       align-items: center;
       grid-template-rows: auto;
       padding: 0 1.5rem;
       transition: all 0.5s ease;
+      z-index: 2;
 
       h1 {
         font-size: 1.5em;
@@ -41,19 +51,20 @@
       }
 
       .tags {
-        display: flex;
-        align-items: center;
+        display: inline-flex;
+        align-items: flex-start;
         justify-content: flex-start;
         flex-wrap: wrap;
         width: 100%;
+        gap: 6px;
+        height: max-content;
 
         .tag {
           background-color: var(--text-color);
           color: var(--background-color);
-          border-radius: 20px;
-          padding: 8px 12px;
+          border-radius: 5px;
+          padding: 4px 6px;
           margin: 0;
-          margin-right: 8px;
           font-size: 0.7rem;
           font-weight: 700;
         }
@@ -75,6 +86,8 @@
             background-color: var(--text-color);
             color: var(--background-color);
             text-transform: uppercase;
+            border-radius: 10px;
+            letter-spacing: 2px;
 
             &:focus {
               outline: none;

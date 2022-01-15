@@ -9,26 +9,22 @@ const Project = ({ data }) => {
     hidden: { opacity: 0 },
   };
 
-  const [display, setDisplay] = useState("projInfoHidden");
+  const [display, setDisplay] = useState("projInfo");
 
   const showInfo = (e) => {
     e.preventDefault();
-    setDisplay("projInfo");
+    setDisplay("projInfoHidden");
   };
 
   const hideInfo = (e) => {
     e.preventDefault();
-    setDisplay("projInfoHidden");
+    setDisplay("projInfo");
   };
 
   return (
     <motion.div initial="hidden" animate="visible" variants={variants}>
       <div className="projectCard">
-        <div
-          className="project"
-          onMouseEnter={(e) => showInfo(e)}
-          onMouseLeave={(e) => hideInfo(e)}
-        >
+        <div className="project">
           <div className={display}>
             <h1>{data.name}</h1>
             <span className="projDesc">{data.desc}</span>
@@ -62,7 +58,12 @@ const Project = ({ data }) => {
               )}
             </div>
           </div>
-          <img alt="" src={data.img} />
+          <div
+            onMouseEnter={(e) => showInfo(e)}
+            onMouseLeave={(e) => hideInfo(e)}
+            className="hoverDiv"
+          ></div>
+          <img alt={data.name} src={data.img} />
         </div>
       </div>
     </motion.div>
