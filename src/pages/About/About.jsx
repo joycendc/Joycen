@@ -18,6 +18,11 @@ const About = () => {
       transition={{ duration: 0.2 }}
     >
       <div className="aboutWrapper">
+        <img
+          className="avatar"
+          src="https://joycendc.github.io/Profile/images/avatar.png"
+          alt="joycen"
+        />
         <div className="aboutDesc">
           Hello! I’m Joycen Capili. I am passionate about Programming and Web
           Design. I am currently studying at Cavite State University taking

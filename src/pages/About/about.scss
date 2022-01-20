@@ -4,6 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  .avatar {
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    padding: 5px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    z-index: 99;
+    z-index: 90;
+  }
 
   .aboutDesc {
     font-size: 1.5em;
@@ -11,5 +24,21 @@
     width: 40rem;
     letter-spacing: 0.1ch;
     z-index: 90;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 1089px) {
+  .aboutWrapper {
+    .aboutDesc {
+      width: 30rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 549px) {
+  .aboutWrapper {
+    .aboutDesc {
+      width: 20rem;
+    }
   }
 }

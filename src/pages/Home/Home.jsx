@@ -36,7 +36,7 @@ const Home = () => {
             </Link>
             <Link
               className="resume"
-              to="/files/JoycenCapili-Resume.pdf"
+              to="/Joycen Capili - Resume.pdf"
               target="_blank"
               download
             >
