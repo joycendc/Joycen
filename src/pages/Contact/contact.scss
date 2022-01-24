@@ -1,17 +1,18 @@
 .contactWrapper {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh);
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: 20px;
 
-  .title {
-    margin-bottom: 35px;
+  .sectionTitle {
+    margin: 1em 0;
+    margin-bottom: 0.5em;
     font-size: 4rem;
     width: 90%;
     z-index: 90;
+    text-align: center;
   }
   .inner {
     display: flex;
@@ -81,6 +82,7 @@
       justify-content: space-between;
       flex-direction: column;
       z-index: 90;
+      margin-left: 0.5em;
 
       .top-detail {
         width: 85%;
@@ -98,6 +100,7 @@
         .detail {
           display: flex;
           align-items: center;
+          margin-bottom: 0.5rem;
 
           .contactIcon {
             margin-right: 15px;
@@ -131,11 +134,13 @@
 
 @media only screen and (max-width: 549px) {
   .contactWrapper {
+    .sectionTitle {
+      font-size: 3rem;
+    }
     .inner {
       width: 80%;
       flex-direction: column-reverse;
       margin: 0;
-      margin-top: 4rem;
 
       .inputs {
         width: 95%;

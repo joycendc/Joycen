@@ -1,18 +1,13 @@
 import React, { useEffect } from "react";
 import "./projects.scss";
 import { seo } from "../../helpers";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Project from "./Project/Project";
 import { projects } from "../../data";
 
-const Projects = () => {
-  useEffect(() => {
-    seo({
-      title: "Projects | Joycen",
-      metaDescription: "Joycen's Project",
-    });
-  }, []);
+import { useInView } from "react-intersection-observer";
 
+const Projects = () => {
   const list = {
     visible: {
       opacity: 1,
@@ -34,9 +29,24 @@ const Projects = () => {
     hidden: { opacity: 0, x: -100 },
   };
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <motion.ul initial="hidden" animate="visible" variants={list}>
+    <motion.ul
+      id="projects"
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={list}
+    >
       <div className="projectWrapper">
+        <h1 className="sectionTitle">Projects</h1>
         {projects.map((proj) => (
           <motion.li
             className="projItem"

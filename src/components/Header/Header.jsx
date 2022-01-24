@@ -18,9 +18,21 @@ const Header = () => {
   return (
     <div className={scrolled ? "headWrapper scrolled" : "headWrapper"}>
       <h1 className="logo">
-        <Link className="headLink" to="/">
-          JOYCEN
-        </Link>
+        <a className="headLink" href="#">
+          Home
+        </a>
+        <a className="headLink" href="#about">
+          About
+        </a>
+        <a className="headLink" href="#skills">
+          Skills
+        </a>
+        <a className="headLink" href="#projects">
+          Projects
+        </a>
+        <a className="headLink" href="#contact">
+          Contact
+        </a>
       </h1>
     </div>
   );

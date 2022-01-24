@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./project.scss";
 import { motion } from "framer-motion";
+import { MdLanguage } from "react-icons/md";
+import { GoCode } from "react-icons/go";
 
 const Project = ({ data }) => {
   const variants = {
@@ -35,26 +37,24 @@ const Project = ({ data }) => {
             </div>
             <div className="cta">
               {data.link && (
-                <Link
+                <a
                   className="link"
-                  to={{
-                    pathname: data.link,
-                  }}
+                  href={data.link}
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <button className="goto">View</button>
-                </Link>
+                  <button className="goto">{<MdLanguage />} View</button>
+                </a>
               )}
               {data.src && (
-                <Link
+                <a
                   className="link"
-                  to={{
-                    pathname: data.src,
-                  }}
+                  href={data.src}
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  <button className="goto src">Source</button>
-                </Link>
+                  <button className="goto src">{<GoCode />} Source</button>
+                </a>
               )}
             </div>
           </div>

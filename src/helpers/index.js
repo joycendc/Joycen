@@ -25,9 +25,9 @@ export const particlesConfig = {
       anim: { enable: true, speed: 1, opacity_min: 0, sync: false },
     },
     size: {
-      value: 2,
+      value: 5,
       random: true,
-      anim: { enable: true, speed: 3, size_min: 0.3, sync: false },
+      anim: { enable: true, speed: 4, size_min: 0.3, sync: false },
     },
     line_linked: {
       enable: false,

@@ -1,5 +1,4 @@
-import React from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import React, { useRef } from "react";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -7,33 +6,36 @@ import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import "./app.scss";
 import Header from "./components/Header/Header";
-import NavLeft from "./components/NavLeft/NavLeft";
-import NavRight from "./components/NavRight/NavRight";
 import Particles from "react-tsparticles";
 import { particlesConfig } from "./helpers";
-import { AnimatePresence } from "framer-motion";
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const location = useLocation();
+  const cursor = useRef(null);
 
-  const NotFound = () => (
-    <main
-      style={{
-        width: "100%",
-        textAlign: "center",
-        padding: "10rem 0",
-      }}
-    >
-      <p>404 Page Not Found !</p>
-    </main>
-  );
+  const handleCursor = (e) => {
+    cursor.current.setAttribute(
+      "style",
+      "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+    );
+  };
+
+  const handleClick = (e) => {
+    cursor.current.classList.add("expand");
+
+    setTimeout(() => {
+      cursor.current.classList.remove("expand");
+    }, 500);
+  };
 
   return (
     <div
+      onMouseMove={handleCursor}
+      onClick={handleClick}
       className="mainWrapper"
       style={{ position: "relative", overflow: "hidden" }}
     >
+      <div className="cursor" ref={cursor}></div>
       <div style={{ position: "absolute" }}>
         <Particles
           style={{ zIndex: "0" }}
@@ -42,21 +44,15 @@ function App() {
           params={particlesConfig}
         />
       </div>
-      {location.pathname !== "/" && <Header />}
-      <NavLeft />
-      <NavRight />
+      <Header />
 
       <div className="mainContainer">
-        <AnimatePresence exitBeforeEnter initial={false}>
-          <Switch location={location} key={location.pathname}>
-            <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/*" component={<NotFound />} />
-          </Switch>
-        </AnimatePresence>
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </div>
   );

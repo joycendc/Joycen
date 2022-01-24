@@ -1,10 +1,19 @@
 .aboutWrapper {
-  height: calc(100vh - 120px);
+  min-height: calc(100vh);
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  .sectionTitle {
+    margin: 1em 0;
+    margin-bottom: 0.5em;
+    font-size: 4rem;
+    width: 90%;
+    z-index: 90;
+    text-align: center;
+  }
 
   .avatar {
     margin: 50px;

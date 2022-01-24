@@ -21,7 +21,7 @@
       position: absolute;
       right: 0;
       width: 40%;
-      z-index: 0;
+      // z-index: 0;
     }
 
     .projInfoHidden {
@@ -77,17 +77,22 @@
 
         .link {
           width: 50%;
+          text-decoration: none;
+
           .goto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.6rem 0.5rem;
             border: none;
             cursor: pointer;
             font-weight: 700;
             background-color: var(--text-color);
             color: var(--background-color);
-            text-transform: uppercase;
             border-radius: 10px;
-            letter-spacing: 2px;
+            gap: 5px;
+            font-size: 0.9em;
 
             &:focus {
               outline: none;

@@ -23,46 +23,51 @@ const Home = () => {
       <div className="homeWrapper">
         <div className="homeContainer">
           <div className="name">JOYCEN CAPILI</div>
-          <div className="desc">Web Developer / Android Developer</div>
-          <div className="desc"></div>
+          <div className="desc">
+            Web Developer <div></div> Android Developer
+          </div>
+
           <img
             className="avatar"
             src="https://joycendc.github.io/Profile/images/avatar.png"
             alt="joycen"
           />
           <div className="cta">
-            <Link to="/contact" className="email">
+            <a href="/contact" className="email">
               {<MdEmail />} Email
-            </Link>
-            <Link
+            </a>
+            <a
               className="resume"
-              to="/Joycen Capili - Resume.pdf"
+              href="/Joycen Capili - Resume.pdf"
               target="_blank"
               download
             >
               {<FaDownload />} Resume
-            </Link>
+            </a>
           </div>
           <div className="socialIcons">
             <div className="socialLink">
-              <Link
-                to={{ pathname: "https://facebook.com/joycenc11" }}
+              <a
+                href="https://facebook.com/joycenc11"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaFacebook className="icon fb" />
-              </Link>
-              <Link
-                to={{ pathname: "https://github.com/joycendc" }}
+              </a>
+              <a
+                href="https://github.com/joycendc"
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaGithub className="icon git" />
-              </Link>
-              <Link
-                to={{ pathname: "https://twitter.com/oioicen" }}
+              </a>
+              <a
+                href={{ pathname: "https://twitter.com/oioicen" }}
                 target="_blank"
+                rel="noreferrer"
               >
                 <FaTwitter className="icon tt" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

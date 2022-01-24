@@ -79,6 +79,15 @@ export const skills = [
 
 export const projects = [
   {
+    id: 99,
+    name: "Rick and Monrty Characters",
+    img: "/images/rnm.jpg",
+    desc: "Shows All Rick and Morty Characters usinng Rick and Morty API and React Query.",
+    tags: ["React JS", "React Query", "API"],
+    link: "https://rick-and-morty-characterslist.netlify.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     id: 1,
     name: "Gagol Search",
     img: "/images/gagol.jpg",
