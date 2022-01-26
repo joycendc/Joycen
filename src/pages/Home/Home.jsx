@@ -14,6 +14,7 @@ const Home = () => {
   }, []);
   return (
     <motion.div
+      id="home"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
