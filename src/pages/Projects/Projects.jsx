@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./projects.scss";
-import { seo } from "../../helpers";
 import { motion, useAnimation } from "framer-motion";
 import Project from "./Project/Project";
 import { projects } from "../../data";

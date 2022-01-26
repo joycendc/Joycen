@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./project.scss";
 import { motion } from "framer-motion";
 import { MdLanguage } from "react-icons/md";

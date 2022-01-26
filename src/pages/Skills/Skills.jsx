@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./skills.scss";
-import { seo } from "../../helpers";
 import { motion, useAnimation } from "framer-motion";
 import Skill from "./Skill/Skill";
 import { skills } from "../../data";

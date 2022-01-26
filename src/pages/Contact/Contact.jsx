@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./contact.scss";
-import { seo } from "../../helpers";
 import { motion, useAnimation } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
