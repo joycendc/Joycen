@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./home.scss";
 import { seo } from "../../helpers";
 import { FaFacebook, FaTwitter, FaGithub, FaDownload } from "react-icons/fa";
