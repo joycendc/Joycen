@@ -11,7 +11,8 @@ const Skills = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.05,
+        staggerChildren: 0.04,
+        delay: 0.5,
       },
     },
     hidden: {
@@ -32,19 +33,17 @@ const Skills = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
   return (
-    <motion.ul
-      id="skills"
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={list}
-    >
+    <motion.ul id="skills" initial="hidden" animate={controls} variants={list}>
       <div className="skillsWrapper">
-        <h1 className="sectionTitle">Used Technologies</h1>
+        <h1 className="sectionTitle" ref={ref}>
+          Technology Stack
+        </h1>
         {skills.map((skill) => (
           <motion.li
             className="skillItem"

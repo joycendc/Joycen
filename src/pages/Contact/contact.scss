@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 0;
 
   .sectionTitle {
     margin: 1em 0;
     margin-bottom: 0.5em;
     font-size: 4rem;
     width: 90%;
-    z-index: 90;
     text-align: center;
   }
   .inner {
@@ -31,7 +31,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        z-index: 90;
 
         ::-webkit-input-placeholder {
           /* WebKit browsers */
@@ -81,7 +80,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      z-index: 90;
+
       margin-left: 0.5em;
 
       .top-detail {
@@ -135,7 +134,7 @@
 @media only screen and (max-width: 549px) {
   .contactWrapper {
     .sectionTitle {
-      font-size: 3rem;
+      font-size: 2.4rem;
     }
     .inner {
       width: 80%;
@@ -149,9 +148,14 @@
           input,
           textarea {
             width: 100%;
+            padding: 0.375rem 0.75rem;
+            line-height: 1.5;
+            margin: 5px 0;
           }
+
           .btn {
             width: 100%;
+            padding: 0.8rem 1.5rem;
           }
         }
       }

@@ -12,7 +12,8 @@ const Projects = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.4,
+        delay: 0.5,
       },
     },
     hidden: {
@@ -33,6 +34,8 @@ const Projects = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 

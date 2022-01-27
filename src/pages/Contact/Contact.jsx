@@ -6,8 +6,8 @@ import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const animVariants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.2 } },
-    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.2, delay: 0.1 } },
+    hidden: { opacity: 0, y: 100 },
   };
 
   const controls = useAnimation();
@@ -15,13 +15,14 @@ const Contact = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
   }, [controls, inView]);
 
   return (
     <motion.div
       id="contact"
-      ref={ref}
       animate={controls}
       variants={animVariants}
       initial="hidden"
@@ -38,7 +39,7 @@ const Contact = () => {
               <input type="submit" value="Send Message" class="btn" />
             </form>
           </div>
-          <div class="contact-info">
+          <div class="contact-info" ref={ref}>
             <div class="top-detail">
               <h1>Let’s talk how i can help you!</h1>
               <p>

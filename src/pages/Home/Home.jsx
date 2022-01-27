@@ -1,37 +1,49 @@
 import React, { useEffect } from "react";
 import "./home.scss";
-import { seo } from "../../helpers";
+// import { seo } from "../../helpers";
 import { FaFacebook, FaTwitter, FaGithub, FaDownload } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { MdEmail } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 const Home = () => {
+  // useEffect(() => {
+  //   seo({
+  //     title: "Home | Joycen",
+  //     metaDescription: "Home",
+  //   });
+  // }, []);
+  const animVariants = {
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay: 0 } },
+    hidden: { opacity: 0, y: 100 },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
   useEffect(() => {
-    seo({
-      title: "Home | Joycen",
-      metaDescription: "Home",
-    });
-  }, []);
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <motion.div
       id="home"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      exit={{ scale: 0 }}
-      transition={{ duration: 0.2 }}
+      ref={ref}
+      animate={controls}
+      variants={animVariants}
+      initial="hidden"
     >
       <div className="homeWrapper">
         <div className="homeContainer">
-          <div className="name">JOYCEN CAPILI</div>
-          <div className="desc">
+          <span className="greet">Hello, my name is</span>
+          <span className="name">JOYCEN CAPILI</span>
+          <span className="desc">
             Web Developer <div></div> Android Developer
-          </div>
+          </span>
 
-          <img
-            className="avatar"
-            src="https://joycendc.github.io/Profile/images/avatar.png"
-            alt="joycen"
-          />
           <div className="cta">
             <a href="/contact" className="email">
               {<MdEmail />} Email

@@ -80,7 +80,7 @@ export const skills = [
 export const projects = [
   {
     id: 99,
-    name: "Rick and Monrty Characters",
+    name: "Rick and Morty Characters",
     img: "/images/rnm.jpg",
     desc: "Shows All Rick and Morty Characters usinng Rick and Morty API and React Query.",
     tags: ["React JS", "React Query", "API"],

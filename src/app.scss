@@ -4,19 +4,17 @@
 }
 
 body::-webkit-scrollbar {
-  width: 0.7em;
+  width: 1em;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--background-color);
+  background: var(--text-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--text-color);
-  border-radius: 10px;
-}
-html {
-  scroll-behavior: smooth;
+  background-color: rgb(175, 172, 172);
+  border: 2px var(--text-color) solid;
+  border-radius: 8px;
 }
 
 body {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./project.scss";
 import { motion } from "framer-motion";
 import { MdLanguage } from "react-icons/md";
-import { GoCode } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 
 const Project = ({ data }) => {
   const variants = {
@@ -52,7 +52,7 @@ const Project = ({ data }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <button className="goto src">{<GoCode />} Source</button>
+                  <button className="goto src">{<FaGithub />} Source</button>
                 </a>
               )}
             </div>

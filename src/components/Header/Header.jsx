@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./header.scss";
+import { FaHome, FaInfoCircle, FaTools } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -16,23 +18,25 @@ const Header = () => {
 
   return (
     <div className={scrolled ? "headWrapper scrolled" : "headWrapper"}>
-      <h1 className="logo">
+      <div className="logo">
         <a className="headLink" href="#home">
+          <FaHome className="icon" />
           Home
         </a>
         <a className="headLink" href="#about">
-          About
+          <FaInfoCircle className="icon" /> About
         </a>
-        <a className="headLink" href="#skills">
+        {/* <a className="headLink" href="#skills">
           Skills
-        </a>
+        </a> */}
         <a className="headLink" href="#projects">
-          Projects
+          <FaTools className="icon" /> Projects
         </a>
         <a className="headLink" href="#contact">
+          <MdEmail className="icon" />
           Contact
         </a>
-      </h1>
+      </div>
     </div>
   );
 };
