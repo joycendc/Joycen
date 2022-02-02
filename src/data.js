@@ -79,6 +79,15 @@ export const skills = [
 
 export const projects = [
   {
+    id: 98,
+    name: "Cryptoworld",
+    img: "/images/thumb.jpg",
+    desc: "Cryptocurrency information.",
+    tags: ["React JS", "Ant d", "API"],
+    link: "https://crypto-worldsite.netlify.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     id: 99,
     name: "Rick and Morty Characters",
     img: "/images/rnm.jpg",

@@ -14,8 +14,6 @@ const About = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [controls, inView]);
   return (
