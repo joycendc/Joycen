@@ -67,9 +67,10 @@
         height: max-content;
 
         .tag {
-          background-color: var(--text-color);
-          color: var(--background-color);
+          background-color: transparent;
+          color: var(--text-color);
           border-radius: 5px;
+          border: 1px solid var(--text-color);
           padding: 4px 6px;
           margin: 0;
           font-size: 0.7rem;
@@ -83,7 +84,6 @@
         gap: 15px;
 
         .link {
-          width: 50%;
           text-decoration: none;
 
           .goto {
@@ -91,13 +91,13 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 0.6rem 0.5rem;
+            padding: 0.6rem 0.8rem;
             border: none;
             cursor: pointer;
             font-weight: 700;
             background-color: var(--text-color);
             color: var(--background-color);
-            border-radius: 10px;
+            border-radius: 0.3rem;
             gap: 5px;
             font-size: 0.9em;
 

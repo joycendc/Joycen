@@ -42,7 +42,7 @@ const Project = ({ data }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <button className="goto">{<MdLanguage />} View</button>
+                  <button className="goto">{<MdLanguage />} Demo</button>
                 </a>
               )}
               {data.src && (

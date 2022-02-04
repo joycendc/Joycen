@@ -1,4 +1,33 @@
 .footerWrapper {
-  margin-top: 2rem;
+  margin: 2rem 0 0 0;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .socialIcons {
+    margin-top: 0.8rem;
+
+    .icon {
+      color: darkgray;
+      height: 20px;
+      width: 20px;
+      margin: 10px;
+      margin-bottom: 0;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .fb:hover {
+      color: #3b5998;
+    }
+    .git:hover {
+      color: white;
+    }
+    .tt:hover {
+      color: #1da1f2;
+    }
+  }
 }
