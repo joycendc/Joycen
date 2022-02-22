@@ -47,11 +47,11 @@ const Projects = () => {
     >
       <div className="projectWrapper">
         <h1 className="sectionTitle">Projects</h1>
-        {projects.map((proj) => (
+        {projects.map((proj, index) => (
           <motion.li
             className="projItem"
             style={{ listStyle: "none" }}
-            key={proj.id}
+            key={index}
             variants={item}
           >
             <Project data={proj} />

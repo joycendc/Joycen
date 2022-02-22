@@ -30,8 +30,12 @@ const Project = ({ data }) => {
             <h1>{data.name}</h1>
             <span className="projDesc">{data.desc}</span>
             <div className="tags">
-              {data.tags.map((tag) => {
-                return <p className="tag">{tag}</p>;
+              {data.tags.map((tag, index) => {
+                return (
+                  <p className="tag" key={index}>
+                    {tag}
+                  </p>
+                );
               })}
             </div>
             <div className="cta">

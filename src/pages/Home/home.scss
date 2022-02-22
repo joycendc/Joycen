@@ -70,7 +70,7 @@
         color: var(--background-color);
         background-color: var(--text-color);
         background-clip: padding-box;
-        border: 2px solid #dee2e6;
+        border: 2px solid var(--text-color);
         appearance: none;
         border-radius: 0.25rem;
         margin: 10px 0;
@@ -83,12 +83,11 @@
         align-items: center;
         justify-content: center;
         padding: 0.8em 1.1em;
-
         font-weight: bolder;
         color: var(--text-color);
         background-color: var(--background-color);
         background-clip: padding-box;
-        border: 2px solid #dee2e6;
+        border: 2px solid var(--text-color);
         appearance: none;
         border-radius: 0.25rem;
         margin: 10px 0;

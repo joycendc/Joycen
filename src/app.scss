@@ -1,6 +1,20 @@
-:root {
+html {
+  --background-color: #f7f8f6;
+  --text-color: #222733;
+  --header-color: rgba(247, 248, 246, 0.8);
+}
+html[data-theme="dark"] {
   --background-color: #222733;
   --text-color: #dbe8d4;
+  --header-color: rgba(34, 39, 51, 0.8);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+  transition-delay: 0 !important;
 }
 
 body::-webkit-scrollbar {

@@ -187,7 +187,7 @@ export const projects = [
     src: "https://github.com/joycendc/Java-ATM",
   },
   {
-    id: 99,
+    id: 11,
     name: "Android Weather App",
     img: "/images/thumb.jpg",
     desc: "Simple Weather application app to see current weather across the world",

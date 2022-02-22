@@ -43,7 +43,7 @@ const Home = () => {
           </span>
 
           <div className="cta">
-            <a href="/contact" className="email">
+            <a href="#contact" className="email">
               {<MdEmail />} Email
             </a>
             <a

@@ -27,8 +27,8 @@ const Contact = () => {
     >
       <div className="contactWrapper">
         <h1 className="sectionTitle">Contact Info</h1>
-        <div class="inner">
-          <div class="inputs">
+        <div className="inner">
+          <div className="inputs">
             <form name="contact-form" method="post">
               <input type="hidden" name="form-name" value="contact-form" />
               <input type="text" placeholder="Your Name" />
@@ -37,8 +37,8 @@ const Contact = () => {
               <input type="submit" value="Send Message" class="btn" />
             </form>
           </div>
-          <div class="contact-info" ref={ref}>
-            <div class="top-detail">
+          <div className="contact-info" ref={ref}>
+            <div className="top-detail">
               <h1>Let’s talk how i can help you!</h1>
               <p>
                 If you like to work with me then drop a message using the
@@ -46,17 +46,13 @@ const Contact = () => {
                 you!
               </p>
             </div>
-            <div class="bot-detail">
-              <div class="detail">
-                <MdEmail class="contactIcon" />
+            <div className="bot-detail">
+              <div className="detail">
+                <MdEmail className="contactIcon" />
                 <span>capilijoycen0@gmail.com</span>
               </div>
-              {/* <div class="detail">
-                <MdEmail class="contactIcon" />
-                <span>09156046093</span>
-              </div> */}
-              <div class="detail">
-                <MdEmail class="contactIcon" />
+              <div className="detail">
+                <MdEmail className="contactIcon" />
                 <span>Bacoor City Cavite</span>
               </div>
             </div>
