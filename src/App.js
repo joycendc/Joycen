@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -10,8 +10,15 @@ import Particles from "react-tsparticles";
 import { particlesConfig } from "./helpers";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
+  const [isLoading, setLoading] = useState(true);
   const cursor = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(!isLoading);
+    }, 1500);
+  }, []);
 
   const handleCursor = (e) => {
     cursor.current.setAttribute(
@@ -27,6 +34,17 @@ function App() {
       cursor.current.classList.remove("expand");
     }, 400);
   };
+
+  if (isLoading) {
+    return (
+      <div className="loader">
+        <div class="dot-bricks"></div>
+        <p style={{ fontSize: "1rem", color: "#fff", marginTop: "1.5em" }}>
+          loading...
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -56,6 +74,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

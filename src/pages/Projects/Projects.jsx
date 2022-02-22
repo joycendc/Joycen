@@ -1,64 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./projects.scss";
-import { motion, useAnimation } from "framer-motion";
 import Project from "./Project/Project";
 import { projects } from "../../data";
-
-import { useInView } from "react-intersection-observer";
+import { BsChevronCompactDown, BsChevronCompactUp } from "react-icons/bs";
 
 const Projects = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.4,
-        delay: 0.5,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  };
+  const [projectList, setProjectList] = useState([]);
+  const [showMore, setShowMore] = useState(false);
 
-  const item = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -100 },
-  };
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+    const list = projects.slice(0, showMore ? projects.length : 8);
+    setProjectList(list);
+
+    console.log(projectList);
+  }, [showMore]);
 
   return (
-    <motion.ul
-      id="projects"
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={list}
-    >
-      <div className="projectWrapper">
-        <h1 className="sectionTitle">Projects</h1>
-        {projects.map((proj, index) => (
-          <motion.li
-            className="projItem"
-            style={{ listStyle: "none" }}
-            key={index}
-            variants={item}
-          >
-            <Project data={proj} />
-          </motion.li>
-        ))}
+    <>
+      <div id="projects">
+        <div className="projectWrapper">
+          <h1 className="sectionTitle">Projects</h1>
+          {projectList.map((proj, index) => (
+            <div key={index} className="projItem" style={{ listStyle: "none" }}>
+              <Project data={proj} />
+            </div>
+          ))}
+        </div>
       </div>
-    </motion.ul>
+      <span className="showMoreProj" onClick={() => setShowMore(!showMore)}>
+        <>Show {showMore ? "less" : "more"}</>
+        {showMore ? (
+          <BsChevronCompactUp size={25} />
+        ) : (
+          <BsChevronCompactDown size={25} />
+        )}
+      </span>
+    </>
   );
 };
 

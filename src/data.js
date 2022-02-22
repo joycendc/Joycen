@@ -79,6 +79,15 @@ export const skills = [
 
 export const projects = [
   {
+    id: 97,
+    name: "Blog Book",
+    img: "/images/crypto.jpg",
+    desc: "Express yourself and read other people ideas",
+    tags: ["React", "Typescript", "Reactstrap", "Node", "Express", "Mongo DB"],
+    link: "https://blogbookblogs.netlify.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     id: 98,
     name: "Cryptoworld",
     img: "/images/crypto.jpg",

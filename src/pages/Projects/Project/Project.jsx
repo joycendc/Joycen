@@ -1,29 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./project.scss";
-import { motion } from "framer-motion";
 import { MdLanguage } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const animVariants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, delay: 0 } },
+  hidden: { opacity: 0, y: 100 },
+};
 
 const Project = ({ data }) => {
-  const variants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  };
-
   const [display, setDisplay] = useState("projInfo");
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-  const showInfo = (e) => {
-    e.preventDefault();
-    setDisplay("projInfoHidden");
-  };
-
-  const hideInfo = (e) => {
-    e.preventDefault();
-    setDisplay("projInfo");
-  };
+  useEffect(() => {
+    controls.start(inView ? "visible" : "hidden");
+  }, [controls, inView]);
 
   return (
-    <motion.div initial="hidden" animate="visible" variants={variants}>
+    <motion.div
+      ref={ref}
+      animate={controls}
+      variants={animVariants}
+      initial="hidden"
+    >
       <div className="projectCard">
         <div className="project">
           <div className={display}>
@@ -62,8 +64,8 @@ const Project = ({ data }) => {
             </div>
           </div>
           <div
-            onMouseEnter={(e) => showInfo(e)}
-            onMouseLeave={(e) => hideInfo(e)}
+            onMouseEnter={(e) => setDisplay("projInfoHidden")}
+            onMouseLeave={(e) => setDisplay("projInfo")}
             className="hoverDiv"
           ></div>
           <img alt={data.name} src={data.img} />

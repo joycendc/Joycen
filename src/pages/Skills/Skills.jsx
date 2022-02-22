@@ -5,35 +5,33 @@ import Skill from "./Skill/Skill";
 import { skills } from "../../data";
 import { useInView } from "react-intersection-observer";
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.02,
+      delay: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const item = {
+  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: -100 },
+};
+
 const Skills = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.04,
-        delay: 0.5,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  };
-
-  const item = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -100 },
-  };
-
   const controls = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
+    controls.start(inView ? "visible" : "hidden");
   }, [controls, inView]);
 
   return (

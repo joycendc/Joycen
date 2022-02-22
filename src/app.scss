@@ -17,6 +17,99 @@ html.transition *:after {
   transition-delay: 0 !important;
 }
 
+.loader {
+  flex: 1;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  background-color: var(--text-color);
+  color: var(--background-color);
+
+  .dot-bricks {
+    position: relative;
+    top: 8px;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    box-shadow: 9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color);
+    animation: dotBricks 2s infinite ease;
+  }
+}
+
+@keyframes dotBricks {
+  0% {
+    box-shadow: 9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color);
+  }
+  8.333% {
+    box-shadow: 10007px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color);
+  }
+  16.667% {
+    box-shadow: 10007px -16px 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color);
+  }
+  25% {
+    box-shadow: 10007px -16px 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color);
+  }
+  33.333% {
+    box-shadow: 10007px 0 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color);
+  }
+  41.667% {
+    box-shadow: 10007px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color);
+  }
+  50% {
+    box-shadow: 10007px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color);
+  }
+  58.333% {
+    box-shadow: 9991px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color);
+  }
+  66.666% {
+    box-shadow: 9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color),
+      9991px -16px 0 0 var(--background-color);
+  }
+  75% {
+    box-shadow: 9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color);
+  }
+  83.333% {
+    box-shadow: 9991px -16px 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color);
+  }
+  91.667% {
+    box-shadow: 9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color),
+      10007px -16px 0 0 var(--background-color);
+  }
+  100% {
+    box-shadow: 9991px -16px 0 0 var(--background-color),
+      9991px 0 0 0 var(--background-color),
+      10007px 0 0 0 var(--background-color);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   body::-webkit-scrollbar {
     width: 0.8em;

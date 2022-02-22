@@ -8,7 +8,7 @@
   gap: 2rem;
   align-content: flex-start;
   padding: 4rem 4rem 0 4rem;
-  margin-bottom: 3em;
+  margin-bottom: 0;
 
   .sectionTitle {
     margin: 1em 0;
@@ -35,6 +35,17 @@
       width: 100%;
     }
   }
+}
+
+.showMoreProj {
+  cursor: pointer;
+  z-index: 0;
+  font-weight: bold;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 550px) and (max-width: 1089px) {

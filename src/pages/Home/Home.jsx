@@ -6,6 +6,10 @@ import { motion, useAnimation } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
 
+const animVariants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay: 0 } },
+  hidden: { opacity: 0, y: 100 },
+};
 const Home = () => {
   // useEffect(() => {
   //   seo({
@@ -13,13 +17,10 @@ const Home = () => {
   //     metaDescription: "Home",
   //   });
   // }, []);
-  const animVariants = {
-    visible: { opacity: 1, y: 0, transition: { duration: 0.3, delay: 0 } },
-    hidden: { opacity: 0, y: 100 },
-  };
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
