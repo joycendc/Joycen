@@ -81,7 +81,7 @@ export const projects = [
   {
     id: 98,
     name: "Cryptoworld",
-    img: "/images/thumb.jpg",
+    img: "/images/crypto.jpg",
     desc: "View Top Cryptocurrencies around the world and see their latest information and Get updates for Cryptocurrency news",
     tags: ["React JS", "Ant d", "API"],
     link: "https://crypto-worldsite.netlify.app/",

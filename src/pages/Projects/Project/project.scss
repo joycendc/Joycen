@@ -51,11 +51,23 @@
       z-index: 0;
 
       h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
 
       .projDesc {
         padding-right: 0.9em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
       }
 
       .tags {
@@ -74,7 +86,7 @@
           border: 1px solid var(--text-color);
           padding: 4px 6px;
           margin: 0;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           font-weight: 700;
         }
       }
@@ -122,17 +134,17 @@
     width: 20rem;
     .project {
       .projInfo {
-        padding: 0 1rem;
+        padding: 0 1.1rem;
         h1 {
-          font-size: 1em;
+          font-size: 1.5em;
         }
         .projDesc {
-          font-size: 0.8em;
+          font-size: 1em;
         }
 
         .tags {
           .tag {
-            font-size: 0.55em;
+            font-size: 0.8em;
           }
         }
       }

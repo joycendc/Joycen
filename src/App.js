@@ -25,7 +25,7 @@ function App() {
 
     setTimeout(() => {
       cursor.current.classList.remove("expand");
-    }, 500);
+    }, 400);
   };
 
   return (
