@@ -18,6 +18,7 @@ const App = () => {
     setTimeout(() => {
       setLoading(!isLoading);
     }, 1500);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleCursor = (e) => {

@@ -11,8 +11,6 @@ const Projects = () => {
   useEffect(() => {
     const list = projects.slice(0, showMore ? projects.length : 8);
     setProjectList(list);
-
-    console.log(projectList);
   }, [showMore]);
 
   return (
