@@ -2,18 +2,24 @@ html {
   --background-color: #f7f8f6;
   --text-color: #222733;
   --header-color: rgba(247, 248, 246, 0.8);
+  cursor: url("data:image/svg+xml,%3Csvg height='10' width='10' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23000' r='4'/%3E%3C/svg%3E")
+      5 5,
+    auto;
 }
 html[data-theme="dark"] {
   --background-color: #222733;
   --text-color: #dbe8d4;
   --header-color: rgba(34, 39, 51, 0.8);
+  cursor: url("data:image/svg+xml,%3Csvg height='10' width='10' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23fff' r='4'/%3E%3C/svg%3E")
+      5 5,
+    auto;
 }
 
 html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 420ms !important;
+  transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 400ms !important;
   transition-delay: 0 !important;
 }
 
@@ -23,8 +29,8 @@ html.transition *:after {
   display: grid;
   place-content: center;
   place-items: center;
-  background-color: var(--text-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
 
   .dot-bricks {
     position: relative;
@@ -33,80 +39,70 @@ html.transition *:after {
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    box-shadow: 9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color);
+    background-color: var(--text-color);
+    box-shadow: 9991px -16px 0 0 var(--text-color),
+      9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color);
     animation: dotBricks 2s infinite ease;
+  }
+  .loading-text {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 1.5em;
   }
 }
 
 @keyframes dotBricks {
   0% {
-    box-shadow: 9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color);
+    box-shadow: 9991px -16px 0 0 var(--text-color),
+      9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color);
   }
   8.333% {
-    box-shadow: 10007px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color);
+    box-shadow: 10007px -16px 0 0 var(--text-color),
+      9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color);
   }
   16.667% {
-    box-shadow: 10007px -16px 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color);
+    box-shadow: 10007px -16px 0 0 var(--text-color),
+      9991px -16px 0 0 var(--text-color), 10007px 0 0 0 var(--text-color);
   }
   25% {
-    box-shadow: 10007px -16px 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color);
+    box-shadow: 10007px -16px 0 0 var(--text-color),
+      9991px -16px 0 0 var(--text-color), 9991px 0 0 0 var(--text-color);
   }
   33.333% {
-    box-shadow: 10007px 0 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color);
+    box-shadow: 10007px 0 0 0 var(--text-color),
+      9991px -16px 0 0 var(--text-color), 9991px 0 0 0 var(--text-color);
   }
   41.667% {
-    box-shadow: 10007px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color);
+    box-shadow: 10007px 0 0 0 var(--text-color),
+      10007px -16px 0 0 var(--text-color), 9991px 0 0 0 var(--text-color);
   }
   50% {
-    box-shadow: 10007px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color);
+    box-shadow: 10007px 0 0 0 var(--text-color),
+      10007px -16px 0 0 var(--text-color), 9991px -16px 0 0 var(--text-color);
   }
   58.333% {
-    box-shadow: 9991px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color);
+    box-shadow: 9991px 0 0 0 var(--text-color),
+      10007px -16px 0 0 var(--text-color), 9991px -16px 0 0 var(--text-color);
   }
   66.666% {
-    box-shadow: 9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color),
-      9991px -16px 0 0 var(--background-color);
+    box-shadow: 9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color),
+      9991px -16px 0 0 var(--text-color);
   }
   75% {
-    box-shadow: 9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color);
+    box-shadow: 9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color),
+      10007px -16px 0 0 var(--text-color);
   }
   83.333% {
-    box-shadow: 9991px -16px 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color);
+    box-shadow: 9991px -16px 0 0 var(--text-color),
+      10007px 0 0 0 var(--text-color), 10007px -16px 0 0 var(--text-color);
   }
   91.667% {
-    box-shadow: 9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color),
-      10007px -16px 0 0 var(--background-color);
+    box-shadow: 9991px -16px 0 0 var(--text-color),
+      9991px 0 0 0 var(--text-color), 10007px -16px 0 0 var(--text-color);
   }
   100% {
-    box-shadow: 9991px -16px 0 0 var(--background-color),
-      9991px 0 0 0 var(--background-color),
-      10007px 0 0 0 var(--background-color);
+    box-shadow: 9991px -16px 0 0 var(--text-color),
+      9991px 0 0 0 var(--text-color), 10007px 0 0 0 var(--text-color);
   }
 }
 
@@ -128,10 +124,9 @@ html.transition *:after {
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   height: 100vh;
-  cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23f00' r='4'/%3E%3C/svg%3E")
-      5 5,
-    auto;
 }
 
 .cursor {

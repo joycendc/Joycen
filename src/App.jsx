@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -9,10 +9,27 @@ import Header from "./components/Header/Header";
 import Particles from "react-tsparticles";
 import { particlesConfig } from "./helpers";
 import Footer from "./components/Footer/Footer";
+import { ThemeContext } from "./contexts/ThemeContext";
 
 const App = () => {
   const [isLoading, setLoading] = useState(true);
   const cursor = useRef(null);
+  const { isDark } = useContext(ThemeContext);
+
+  useEffect(() => {
+    trans();
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light"
+    );
+  }, [isDark]);
+
+  let trans = () => {
+    document.documentElement.classList.add("transition");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("transition");
+    }, 800);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,9 +57,7 @@ const App = () => {
     return (
       <div className="loader">
         <div className="dot-bricks"></div>
-        <p style={{ fontSize: "1rem", color: "#fff", marginTop: "1.5em" }}>
-          loading...
-        </p>
+        <p className="loading-text">loading...</p>
       </div>
     );
   }

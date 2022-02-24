@@ -29,11 +29,11 @@ const Contact = () => {
         <h1 className="sectionTitle">Contact Info</h1>
         <div className="inner">
           <div className="inputs">
-            <form name="contact-form" method="post">
-              <input type="hidden" name="form-name" value="contact-form" />
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your email" />
-              <textarea placeholder="Your Message"></textarea>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your email" required />
+              <textarea placeholder="Your Message" required></textarea>
               <input type="submit" value="Send Message" className="btn" />
             </form>
           </div>

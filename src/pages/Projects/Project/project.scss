@@ -20,10 +20,10 @@
     .hoverDiv {
       position: absolute;
       right: 0;
-      width: 40%;
-      background-color: rgba(34, 39, 51, 0.5);
+      width: 37%;
+      background-color: rgba(34, 39, 51, 0.6);
       backdrop-filter: blur(4px);
-      transition: all 0.3s ease;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
         background-color: transparent;

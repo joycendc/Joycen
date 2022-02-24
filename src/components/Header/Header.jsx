@@ -1,13 +1,14 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import "./header.scss";
 import { FaHome, FaInfoCircle, FaTools } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { RiMoonFill, RiSunFill } from "react-icons/ri";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true);
   const ref = useRef(null);
+  const { isDark, setIsDark } = useContext(ThemeContext);
 
   const changeBackground = () => {
     setScrolled(window.scrollY >= 10 ? true : false);
@@ -17,21 +18,6 @@ const Header = () => {
     changeBackground();
     window.addEventListener("scroll", changeBackground);
   }, []);
-
-  useEffect(() => {
-    trans();
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDark ? "dark" : "light"
-    );
-  }, [isDark]);
-
-  let trans = () => {
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("transition");
-    }, 800);
-  };
 
   return (
     <div className={`headWrapper ${scrolled && "scrolled"}`}>

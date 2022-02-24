@@ -133,15 +133,6 @@ export const projects = [
     src: "",
   },
   {
-    id: 4,
-    name: "Blogblogan",
-    img: "/images/blog.jpg",
-    desc: "Simple Blogging website with tags",
-    tags: ["HTML", "CSS", "JS"],
-    link: "https://blogblogan.netlify.app/",
-    src: "",
-  },
-  {
     id: 5,
     name: "Me Ecommerce",
     img: "/images/ecom.jpg",
