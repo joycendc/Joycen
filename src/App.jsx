@@ -18,7 +18,7 @@ const App = () => {
     setTimeout(() => {
       setLoading(!isLoading);
     }, 1500);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleCursor = (e) => {
@@ -39,7 +39,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="loader">
-        <div class="dot-bricks"></div>
+        <div className="dot-bricks"></div>
         <p style={{ fontSize: "1rem", color: "#fff", marginTop: "1.5em" }}>
           loading...
         </p>

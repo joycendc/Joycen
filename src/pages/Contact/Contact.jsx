@@ -34,7 +34,7 @@ const Contact = () => {
               <input type="text" placeholder="Your Name" />
               <input type="email" placeholder="Your email" />
               <textarea placeholder="Your Message"></textarea>
-              <input type="submit" value="Send Message" class="btn" />
+              <input type="submit" value="Send Message" className="btn" />
             </form>
           </div>
           <div className="contact-info" ref={ref}>

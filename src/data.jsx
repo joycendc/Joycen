@@ -195,13 +195,4 @@ export const projects = [
     link: "",
     src: "https://github.com/joycendc/Java-ATM",
   },
-  {
-    id: 11,
-    name: "Android Weather App",
-    img: "/images/thumb.jpg",
-    desc: "Simple Weather application app to see current weather across the world",
-    tags: ["Android", "Java", "API"],
-    link: "",
-    src: "https://github.com/joycendc/Android-Java-WeatherApp",
-  },
 ];
