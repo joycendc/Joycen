@@ -2,7 +2,6 @@ export const skills = [
   {
     id: 1,
     title: "HTML 5",
-    // src: "https://img.icons8.com/ios/50/000000/html-5--v2.png",
     src: "https://img.icons8.com/color/50/000000/html-5.png",
   },
   {
@@ -21,6 +20,11 @@ export const skills = [
     src: "https://img.icons8.com/color/48/000000/react-native.png",
   },
   {
+    id: 10,
+    title: "React Native",
+    src: "https://img.icons8.com/officel/80/000000/react.png",
+  },
+  {
     id: 5,
     title: "Node JS",
     src: "https://img.icons8.com/color/48/000000/nodejs.png",
@@ -29,6 +33,11 @@ export const skills = [
     id: 6,
     title: "Mongo DB",
     src: "https://img.icons8.com/color/48/000000/mongodb.png",
+  },
+  {
+    id: 15,
+    title: "Material UI",
+    src: "https://img.icons8.com/color/48/000000/material-ui.png",
   },
   {
     id: 7,
@@ -46,19 +55,9 @@ export const skills = [
     src: "https://img.icons8.com/color/48/000000/git.png",
   },
   {
-    id: 10,
-    title: "C #",
-    src: "https://img.icons8.com/color/48/000000/c-sharp-logo.png",
-  },
-  {
     id: 11,
     title: "PHP",
     src: "https://img.icons8.com/color/48/000000/php.png",
-  },
-  {
-    id: 12,
-    title: "Flutter",
-    src: "https://img.icons8.com/color/48/000000/flutter.png",
   },
   {
     id: 13,
@@ -70,18 +69,22 @@ export const skills = [
     title: "Firebase",
     src: "https://img.icons8.com/color/48/000000/firebase.png",
   },
-  {
-    id: 15,
-    title: "Material UI",
-    src: "https://img.icons8.com/color/48/000000/material-ui.png",
-  },
 ];
 
 export const projects = [
   {
+    id: 96,
+    name: "Cart App",
+    img: "/images/cart.jpg",
+    desc: "Express yourself and read other people ideas",
+    tags: ["React JS", "SCSS"],
+    link: "https://cart-proj.netlify.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     id: 97,
     name: "Blog Book",
-    img: "/images/crypto.jpg",
+    img: "/images/blog.jpg",
     desc: "Express yourself and read other people ideas",
     tags: ["React", "Typescript", "Reactstrap", "Node", "Express", "Mongo DB"],
     link: "https://blogbookblogs.netlify.app/",

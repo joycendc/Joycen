@@ -38,7 +38,7 @@ const Skills = () => {
     <motion.ul id="skills" initial="hidden" animate={controls} variants={list}>
       <div className="skillsWrapper">
         <h1 className="sectionTitle" ref={ref}>
-          Technology Stack
+          Technology i touched
         </h1>
         {skills.map((skill) => (
           <motion.li
