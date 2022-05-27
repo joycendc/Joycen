@@ -40,7 +40,7 @@ const Home = () => {
           <span className="greet">Hello, my name is</span>
           <span className="name">JOYCEN CAPILI</span>
           <span className="desc">
-            Web Developer <div></div> Android Developer
+            Web Developer <div></div> Mobile Developer
           </span>
 
           <div className="cta">
