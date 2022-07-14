@@ -40,11 +40,11 @@ const Skills = () => {
         <h1 className="sectionTitle" ref={ref}>
           Technology i touched
         </h1>
-        {skills.map((skill) => (
+        {skills.map((skill, index) => (
           <motion.li
             className="skillItem"
             style={{ listStyle: "none" }}
-            key={skill.id}
+            key={index}
             variants={item}
           >
             <Skill title={skill.title} src={skill.src} />

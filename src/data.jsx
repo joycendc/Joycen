@@ -1,79 +1,80 @@
 export const skills = [
   {
-    id: 1,
     title: "HTML 5",
     src: "https://img.icons8.com/color/50/000000/html-5.png",
   },
   {
-    id: 2,
     title: "CSS 3",
     src: "https://img.icons8.com/color/48/000000/css3.png",
   },
   {
-    id: 3,
     title: "Javascript",
     src: "https://img.icons8.com/color/48/000000/javascript.png",
   },
   {
-    id: 4,
     title: "React JS",
     src: "https://img.icons8.com/color/48/000000/react-native.png",
   },
   {
-    id: 10,
     title: "React Native",
     src: "https://img.icons8.com/officel/80/000000/react.png",
   },
   {
-    id: 5,
     title: "Node JS",
     src: "https://img.icons8.com/color/48/000000/nodejs.png",
   },
   {
-    id: 6,
     title: "Mongo DB",
     src: "https://img.icons8.com/color/48/000000/mongodb.png",
   },
   {
-    id: 15,
     title: "Material UI",
     src: "https://img.icons8.com/color/48/000000/material-ui.png",
   },
   {
-    id: 7,
     title: "Java",
     src: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png",
   },
   {
-    id: 8,
     title: "SQL",
     src: "https://img.icons8.com/color/48/000000/sql.png",
   },
   {
-    id: 9,
     title: "GIT",
     src: "https://img.icons8.com/color/48/000000/git.png",
   },
   {
-    id: 11,
     title: "PHP",
     src: "https://img.icons8.com/color/48/000000/php.png",
   },
   {
-    id: 13,
     title: "REST API",
     src: "https://img.icons8.com/color/48/000000/api-settings.png",
   },
   {
-    id: 14,
     title: "Firebase",
     src: "https://img.icons8.com/color/48/000000/firebase.png",
+  },
+  {
+    title: "Azure Function",
+    src: "https://img.icons8.com/color/48/000000/azure.png",
+  },
+  {
+    title: "Chakra UI",
+    src: "https://img.icons8.com/color/48/000000/chakra-ui.png",
   },
 ];
 
 export const projects = [
   {
-    id: 96,
+    name: "Tesla Clone",
+    img: "/images/tesla.png",
+    desc: "Tesla website clone",
+    tags: ["Next JS", "Styled components"],
+    link: "https://tesla-clone-next.netlify.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     name: "Cart App",
     img: "/images/cart.jpg",
     desc: "Express yourself and read other people ideas",
@@ -82,7 +83,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 97,
     name: "Blog Book",
     img: "/images/blog.jpg",
     desc: "Express yourself and read other people ideas",
@@ -91,7 +91,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 98,
     name: "Cryptoworld",
     img: "/images/crypto.jpg",
     desc: "View Top Cryptocurrencies around the world and see their latest information and Get updates for Cryptocurrency news",
@@ -100,7 +99,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 99,
     name: "Rick and Morty Characters",
     img: "/images/rnm.jpg",
     desc: "Shows All Rick and Morty Characters usinng Rick and Morty API and React Query",
@@ -109,7 +107,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 1,
     name: "Gagol Search",
     img: "/images/gagol.jpg",
     desc: "Have a question ? Just gagol search it to get answers and informations",
@@ -118,7 +115,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 2,
     name: "All About Rizal",
     img: "/images/rizal.jpg",
     desc: "This site contains very comprehensive materials on and by Rizal in both the English and Filipino languages and continues to acquire and update information",
@@ -127,7 +123,6 @@ export const projects = [
     src: "https://github.com/joycendc",
   },
   {
-    id: 3,
     name: "Charants",
     img: "/images/rant.jpg",
     desc: "This app let you post your rants about your life",
@@ -136,7 +131,6 @@ export const projects = [
     src: "",
   },
   {
-    id: 5,
     name: "Me Ecommerce",
     img: "/images/ecom.jpg",
     desc: "Simple Ecommerce website",
@@ -145,7 +139,6 @@ export const projects = [
     src: "",
   },
   {
-    id: 6,
     name: "Chararat",
     img: "/images/charat.jpg",
     desc: "Simple Chatting app using Chat Engine",
@@ -154,7 +147,6 @@ export const projects = [
     src: "",
   },
   {
-    id: 7,
     name: "Chat App",
     img: "/images/chat.jpg",
     desc: "Simple chat app using Socket IO",
@@ -163,7 +155,6 @@ export const projects = [
     src: "",
   },
   {
-    id: 8,
     name: "Library Mangement System",
     img: "/images/lms.png",
     desc: "Library Management System built on Netbeans IDE",
@@ -172,7 +163,6 @@ export const projects = [
     src: "https://github.com/joycendc/Java-LibrarayManagementSystem",
   },
   {
-    id: 9,
     name: "ATM Simulator",
     img: "/images/thumb.jpg",
     desc: "ATM Simulator built in Neatbeans IDE",
@@ -181,7 +171,6 @@ export const projects = [
     src: "https://github.com/joycendc/Java-ATM",
   },
   {
-    id: 10,
     name: "Payroll Management System",
     img: "/images/pms.png",
     desc: "Payroll Managment System website using ASP.Net and C#",
