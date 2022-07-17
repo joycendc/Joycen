@@ -85,7 +85,7 @@ export const projects = [
   {
     name: "Cart App",
     img: "/images/cart.jpg",
-    desc: "Express yourself and read other people ideas",
+    desc: "Responsive Cart simulation app",
     tags: ["React JS", "SCSS"],
     link: "https://cart-proj.netlify.app/",
     src: "https://github.com/joycendc",
