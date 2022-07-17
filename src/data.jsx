@@ -67,9 +67,17 @@ export const skills = [
 
 export const projects = [
   {
+    name: "Cutify",
+    img: "/images/cutify.png",
+    desc: "Spotify clone for desktop",
+    tags: ["Next JS", "Chakra UI", "Typescript", "Prisma"],
+    link: "https://cutify-dev.vercel.app/",
+    src: "https://github.com/joycendc",
+  },
+  {
     name: "Tesla Clone",
     img: "/images/tesla.png",
-    desc: "Tesla website clone",
+    desc: "Responsive Tesla website clone",
     tags: ["Next JS", "Styled components"],
     link: "https://tesla-clone-next.netlify.app/",
     src: "https://github.com/joycendc",
